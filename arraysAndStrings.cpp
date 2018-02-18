@@ -11,8 +11,6 @@ int main()
 {
 	cout << "Hello, algorithms!\n";
 
-
-
 	cin.get();
 
 	return 0;
@@ -61,4 +59,47 @@ bool isPermutation(string str1, string str2)
 		return true;
 	else
 		return false;
+}
+
+/*
+	Determines if a string can be arranged in a palindrome.
+*/
+
+bool palindromePossible(string str)
+{
+	int alphabet[26] = { 0 };
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		int pos = charToAlphabetPos(str[i]);
+
+		if (pos >= 0)
+		{
+			alphabet[pos]++;
+		}
+	}
+
+	bool odd = false;
+
+	for (int i = 0; i < 26; i++)
+	{
+		if (alphabet[i] % 2 != 0 && !odd)
+			odd = true;
+		else if (alphabet[i] % 2 != 0 && odd)
+			return false;
+	}
+
+	return true;
+}
+
+int charToAlphabetPos(char c)
+{
+	int pos = -1;
+
+	if (c >= 65 && c <= 90)
+		pos = (int)c - 65;
+	else if (c >= 97 && c <= 122)
+		pos = (int)c - 97;
+
+	return pos;
 }
