@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include <algorithm>
 
 #include "arraysAndStrings.h"
 
@@ -10,8 +11,7 @@ int main()
 {
 	cout << "Hello, algorithms!\n";
 
-	if (hasUniqueChar("azerty"))
-		cout << "blbl";
+
 
 	cin.get();
 
@@ -43,4 +43,22 @@ bool hasUniqueChar(string str)
 	}
 
 	return true;
+}
+
+/*
+	Determines if a string is a permutation of another.
+*/
+
+bool isPermutation(string str1, string str2)
+{
+	if (str1.length() != str2.length())
+		return false;
+
+	sort(str1.begin(), str1.end());
+	sort(str2.begin(), str2.end());
+
+	if (str1 == str2)
+		return true;
+	else
+		return false;
 }
