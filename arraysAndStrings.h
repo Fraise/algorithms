@@ -6,3 +6,5 @@ bool isPermutation(string str1, string str2);
 
 bool palindromePossible(string str);
 int charToAlphabetPos(char c);
+
+string basicCompress(string str);

@@ -103,3 +103,40 @@ int charToAlphabetPos(char c)
 
 	return pos;
 }
+
+/*
+	Implements a method to perform basic string compression using the count of repeated characters.
+	If the compressed string is bigger than the non compressed one, the function return the original.
+*/
+
+string basicCompress(string str)
+{
+	char currChar = str[0];
+	int charNum = 0;
+	string retStr = "";
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (currChar != str[i])
+		{
+			retStr += currChar;
+			retStr += to_string(charNum);
+
+			currChar = str[i];
+			charNum = 1;
+		}
+		else
+		{
+			charNum++;
+			currChar = str[i];
+		}
+	}
+
+	retStr += currChar;
+	retStr += to_string(charNum);
+
+	if (retStr.length() > str.length())
+		return str;
+	else
+		return retStr;
+}
