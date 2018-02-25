@@ -7,14 +7,6 @@
 
 using namespace std;
 
-int main()
-{
-	cout << "Hello, algorithms!\n";
-
-	cin.get();
-
-	return 0;
-}
 
 /*
 	Implements an algorithm to determine if a string has all unique characters.
