@@ -19,6 +19,7 @@
 
 #include <iostream>
 #include <string>
+#include <random>
 
 #include "IntStack.h"
 
@@ -28,7 +29,7 @@ int main()
 {
 	cout << "Hello, algorithms!\n";
 
-	cin.get();
+	std::cin.get();
 
 	return 0;
 }
