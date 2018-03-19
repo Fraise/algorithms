@@ -143,12 +143,14 @@
     <ClCompile Include="bits.cpp" />
     <ClCompile Include="IntStack.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="recursive.cpp" />
     <ClCompile Include="sorting.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="arraysAndStrings.h" />
     <ClInclude Include="bits.h" />
     <ClInclude Include="IntStack.h" />
+    <ClInclude Include="recursive.h" />
     <ClInclude Include="sorting.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
