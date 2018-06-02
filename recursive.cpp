@@ -8,23 +8,23 @@
 
 using namespace std;
 
-int fibonacci(int index)
+unsigned long long int fibonacci(int index)
 {
 	if (index == 0 || index == 1) { return index; }
 
 	return fibonacci(index - 1) + fibonacci(index - 2);
 }
 
-int fibonacciMem(int index)
+unsigned long long int fibonacciMem(int index)
 {
 	if (index == 0 || index == 1) { return index; }
 
-	vector<int> mem(index + 1);
+	vector<unsigned long long int> mem(index + 1);
 
 	return fibonacciMemRec(index, mem);
 }
 
-int fibonacciMemRec(int index, vector<int> mem)
+unsigned long long int fibonacciMemRec(int index, vector<unsigned long long int>& mem)
 {
 	if (index == 0 || index == 1) { return index; }
 

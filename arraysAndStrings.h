@@ -8,3 +8,5 @@ bool palindromePossible(string str);
 int charToAlphabetPos(char c);
 
 string basicCompress(string str);
+
+void printDiagonals(vector<vector<int>> mat);

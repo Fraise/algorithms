@@ -132,3 +132,35 @@ string basicCompress(string str)
 	else
 		return retStr;
 }
+
+/*
+	Prints all the elements of a matrix in diagonal starting by the first column.
+
+	The matrix :
+
+	1 2 3
+	4 5 6
+	7 8 9
+
+	would print as : 1 4 2 7 5 3 8 6 9
+*/
+
+
+void printDiagonals(vector<vector<int>> mat)
+{
+	for (int i = 0; i < mat.size(); i++)
+	{
+		for (int j = 0; j <= i && j < mat[0].size(); j++)
+		{
+			cout << mat[i - j][j] << " ";
+		}
+	}
+
+	for (int j = 1; j < mat[0].size(); j++)
+	{
+		for (int i = 0; i < mat.size() && j + i < mat[0].size(); i++)
+		{
+			cout << mat[mat.size() - 1 - i][j + i] << " ";
+		}
+	}
+}
